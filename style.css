@@ -23,43 +23,53 @@
     font-weight: bolder;
   }
 
-  header {
+  .infoSite {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
+    justify-content: space-between;
   }
 
-  .logo {
-    justify-content: flex-start;
-  }
-  
-  .navbar {
-    justify-content: flex-end;
-}
-
-  .caption {
-    align-self: flex-end;
-  }
-  
-  .search_form {
+  .infoSite a {
     justify-content: flex-start;
   }
 
-  nav ul {
-    display: flex;
+  .infoSite nav.navbar {
     justify-content: flex-end;
+  }
+
+  nav li {
     list-style-type: none;
+    display: inline-block;
+    margin: 0 10px;
   }
 
-  ul li h2 a { 
+  nav li > a { 
     text-decoration: none;
     color: black;
+    position: relative;
   }
 
-  ul li h2 a:hover { 
+  nav li > a.activeNav {
     color: #0065FC;
+  }
+
+  nav li > a::after { 
+    content: "";
+    transition: all 0.3s;
+    display: block;
+    height: 3px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+  }
+
+  nav li > a:hover::after, nav li > a.activeNav::after { 
+    width: 100%;
+    background: #0065FC;
+  }
+
+  .filters ul {
+    display: flex;
+    list-style: none;
   }
 
   h2#Housing {
