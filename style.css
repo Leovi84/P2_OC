@@ -76,6 +76,10 @@
     padding: 0 15px;
   }
 
+  .housing {
+  display: flex;
+  }
+
   .housingMarseille {
     max-width: 75%;
     background-color: #f2F2F2;
@@ -89,8 +93,11 @@
     max-width: fit-content;
   }
 
-  .mostPopularMarseille {
-    max-width: 25%;
+  .housingMarseille .sectionArticle, 
+  .popularHousingMarseille .sectionArticle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .housingMarseille article {
@@ -100,7 +107,15 @@
     margin: 10px;
   }
 
-  .housingMarseille article img {
+  .popularHousingMarseille article {
+    max-width: 75%;
+    background-color: white;
+    border-radius: 40px;
+    margin: 10px;
+  }
+
+  .housingMarseille article img, 
+  .popularHousingMarseille article img {
     max-width: 100%;
     border-radius: 40px 40px 0 0;
     padding: 5px;
@@ -119,7 +134,25 @@
   color: #0065FC;
 }
 
-  .sectionArticle {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.popularHousingMarseille {
+  max-width: 25%;
+  background-color: #f2F2F2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.activities {
+  max-width: 100%;
+  background-color: #f2F2F2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.activities .sectionArticle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
