@@ -9,6 +9,7 @@
 
   body {
     font-family: "Raleway", sans-serif;
+    padding: 0 110px;
   }
 
   a {
@@ -76,7 +77,7 @@
     color: #0065FC;
   }
 
-  .caption, .caption p {
+  .caption {
     margin: 15px;
     line-height: 0.5;
   }
@@ -108,7 +109,7 @@
     display: flex;
     align-items: center;
     margin: 15px;
-    max-width: 50%;
+    max-width: 65%;
     flex-wrap: wrap;
   }
 
@@ -161,13 +162,8 @@
     flex-direction: row;
     margin: 15px;
     padding: 25px;
+    border-radius: 20px;
   }
-
-  /*.housingMarseille .sectionTitle, 
-  .popularHousingMarseille .sectionTitle,
-  .activities .sectionTitle {
-    max-width: fit-content;
-  }*/
 
   .housingMarseille .sectionArticle, 
   .popularHousingMarseille .sectionArticle,
@@ -190,7 +186,7 @@
     border-radius: 20px 20px 0 0;
     padding: 5px;
     object-fit: cover;
-    height: 300px;
+    height: 150px;
     width: 100%;
   }
 
@@ -203,6 +199,7 @@
     flex-direction: row;
     margin: 15px;
     padding: 25px;
+    border-radius: 20px;
   }
   
   .popularHousingMarseille article {
@@ -217,13 +214,20 @@
     border-radius: 20px 0 0 20px;
     padding: 5px;
     object-fit: cover;
-    height: 250px;
+    height: 150px;
     width: 100%;
   }
   
   .mostPopularMarseille .sectionArticle article {
     display: flex;
     flex-direction: row;
+  }
+  
+  .sectionTitle {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   figcaption {
@@ -233,11 +237,18 @@
   figcaption h4, figcaption p  {
     color: black;
     margin: auto;
+    padding: 10px 0;
   }
 
-  i.fa-solid.fa-star, i.fa-regular.fa-star {
+  i.fa-solid.fa-star {
   color: #0065FC;
+  padding-bottom: 10px;
 }
+
+  span i.fa-solid.fa-star {
+    color: grey;
+    padding-bottom: 10px;
+  }
 
 .activities {
   display: flex;
@@ -262,5 +273,21 @@
   object-fit: cover;
   height: 200px;
   width: 100%;
+}
+
+section.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  background-color: #f2f2f2;
+  justify-content: space-around;
+}
+.aboutList {
+  flex-grow: 1;
+}
+
+.aboutList ul {
+  list-style: none;
+  padding: 0;
 }
 
