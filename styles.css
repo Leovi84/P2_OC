@@ -137,6 +137,15 @@
     padding: 8px;
   }
 
+  .filtersList li a {
+    color: black;
+    font-weight: bold;
+  } 
+
+  .filtersList li:hover, .filtersList li:visited {
+    filter: grayscale(1);
+  }
+
   p i {
     border: solid 1px #f2F2F2;
     width: 15px;
@@ -145,16 +154,16 @@
     color: #0065FC;
   }
 
-  h2#Housing {
-    padding: 0 15px;
-  }
+  /*h2#housing, h2#activities, p strong {
+    padding: 0 35px;
+  }*/
 
   .housing {
-  display: flex;
+    display: flex;
   }
 
   .housingMarseille {
-    max-width: 75%;
+    max-width: 70%;
     background-color: #f2F2F2;
     display: flex;
     justify-content: space-between;
@@ -166,16 +175,14 @@
   }
 
   .housingMarseille .sectionArticle, 
-  .popularHousingMarseille .sectionArticle,
-  .activities .sectionArticle,
-  .activities .sectionAside {
+  .popularHousingMarseille .sectionArticle {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /*justify-content: center;*/
   }
 
   .housingMarseille article {
-    max-width: 30%;
+   /*max-width: 30%;*/
     background-color: white;
     border-radius: 20px;
     margin: 10px;
@@ -191,7 +198,7 @@
   }
 
   .popularHousingMarseille {
-    max-width: 25%;
+    max-width: 27%;
     background-color: #f2F2F2;
     display: flex;
     justify-content: space-between;
@@ -223,18 +230,25 @@
     flex-direction: row;
   }
   
-  .sectionTitle {
+  /*.sectionTitle {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 
-  figcaption {
+  .activities .sectionTitle {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }*/
+
+  .cardText {
     padding: 0 15px;
   }
 
-  figcaption h4, figcaption p  {
+  .cardText h4, .cardText p  {
     color: black;
     margin: auto;
     padding: 10px 0;
@@ -246,17 +260,33 @@
 }
 
   span i.fa-solid.fa-star {
-    color: grey;
+    color: lightgrey;
     padding-bottom: 10px;
   }
 
+.activitiesMarseille {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .activities {
   display: flex;
-  /*flex-wrap: wrap;
-  flex-direction: row;*/
-  margin: 15px;
+  margin: 0 auto;
   padding: 25px;
 }
+
+.activities .sectionArticle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .activities .sectionAside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
 .activities article, 
 .activities aside {
@@ -271,7 +301,7 @@
   border-radius: 20px 20px 0 0;
   padding: 5px;
   object-fit: cover;
-  height: 200px;
+  height: 230px;
   width: 100%;
 }
 
