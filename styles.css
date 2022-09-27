@@ -1,0 +1,293 @@
+ html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: "Raleway", sans-serif;
+    padding: 0 110px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h4 {   
+    font-weight: bolder;
+  }
+
+  .infoSite {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    align-items: center;
+  }
+
+  .infoSite a img {
+    width: 70%;
+  }
+
+  .infoSite nav.navbar {
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  nav li.activeNav a {
+    text-decoration: none;
+    color: #0065FC;
+    font-size: 16px;
+    font-weight: lighter;
+}
+  
+  nav li.inactiveNav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+  nav li.activeNav a::before,
+  nav li.inactiveNav a::before { 
+    content: "";
+    transition: all 0.3s;
+    display: block;
+    height: 3px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+  }
+
+  nav li.activeNav a:hover::before,
+  nav li.inactiveNav a:hover::before { 
+    width: 100%;
+    background: #0065FC;
+    color: #0065FC;
+  }
+
+  .caption {
+    margin: 15px;
+    line-height: 0.5;
+  }
+
+  form.searchForm {
+    margin: 15px;
+  }
+
+  i.fa-solid.fa-location-dot {
+    padding: 12px;
+    background: #f2f2f2;
+    border-radius: 10px 0 0 10px;
+  }
+
+  input.outside {
+    background: #0065F2;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    padding: 10px;
+    color: white;
+  }
+
+  input.inside {
+    padding: 10px;
+    font-weight: bolder;
+  }
+
+  .filtersList {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    max-width: 65%;
+    flex-wrap: wrap;
+  }
+
+  .filtersList ul {
+    display: flex;
+    list-style: none;
+  }
+
+  .filtersList li {
+    border-radius: 30px 30px;
+    padding: 0 20px 0 0;
+    margin: 5px;
+    border: #F2f2f2 2px solid;
+  }
+
+  .filtersList li i {
+    text-align: center;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    vertical-align: middle;
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  p i {
+    border: solid 1px #f2F2F2;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    color: #0065FC;
+  }
+
+  h2#Housing {
+    padding: 0 15px;
+  }
+
+  .housing {
+  display: flex;
+  }
+
+  .housingMarseille {
+    max-width: 75%;
+    background-color: #f2F2F2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .housingMarseille .sectionArticle, 
+  .popularHousingMarseille .sectionArticle,
+  .activities .sectionArticle,
+  .activities .sectionAside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .housingMarseille article {
+    max-width: 30%;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    filter: drop-shadow(0 1mm 1mm rgb(105, 105, 105));
+  }
+
+  .housingMarseille article img {
+    border-radius: 20px 20px 0 0;
+    padding: 5px;
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+  }
+
+  .popularHousingMarseille {
+    max-width: 25%;
+    background-color: #f2F2F2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 20px;
+  }
+  
+  .popularHousingMarseille article {
+    max-width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    filter: drop-shadow(0 1mm 1mm rgb(105, 105, 105));
+  }
+  
+  .popularHousingMarseille article img {
+    border-radius: 20px 0 0 20px;
+    padding: 5px;
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+  }
+  
+  .mostPopularMarseille .sectionArticle article {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .sectionTitle {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  figcaption {
+    padding: 0 15px;
+  }
+
+  figcaption h4, figcaption p  {
+    color: black;
+    margin: auto;
+    padding: 10px 0;
+  }
+
+  i.fa-solid.fa-star {
+  color: #0065FC;
+  padding-bottom: 10px;
+}
+
+  span i.fa-solid.fa-star {
+    color: grey;
+    padding-bottom: 10px;
+  }
+
+.activities {
+  display: flex;
+  /*flex-wrap: wrap;
+  flex-direction: row;*/
+  margin: 15px;
+  padding: 25px;
+}
+
+.activities article, 
+.activities aside {
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  filter: drop-shadow(0 1mm 1mm rgb(105, 105, 105));
+}
+
+.activities article img,
+.activities aside img {
+  border-radius: 20px 20px 0 0;
+  padding: 5px;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+section.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  background-color: #f2f2f2;
+  justify-content: space-around;
+}
+.aboutList {
+  flex-grow: 1;
+}
+
+.aboutList ul {
+  list-style: none;
+  padding: 0;
+}
+
