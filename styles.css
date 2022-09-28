@@ -9,7 +9,6 @@
 
   body {
     font-family: "Raleway", sans-serif;
-    padding: 0 110px;
   }
 
   a {
@@ -79,11 +78,11 @@
 
   .caption {
     margin: 15px;
-    line-height: 0.5;
   }
 
   form.searchForm {
     margin: 15px;
+    position: relative;
   }
 
   i.fa-solid.fa-location-dot {
@@ -109,7 +108,6 @@
     display: flex;
     align-items: center;
     margin: 15px;
-    max-width: 65%;
     flex-wrap: wrap;
   }
 
@@ -154,6 +152,10 @@
     color: #0065FC;
   }
 
+  p.infos {
+    margin: 15px;
+  }
+
   /*h2#housing, h2#activities, p strong {
     padding: 0 35px;
   }*/
@@ -193,7 +195,7 @@
     border-radius: 20px 20px 0 0;
     padding: 5px;
     object-fit: cover;
-    height: 150px;
+    height: 164px;
     width: 100%;
   }
 
@@ -203,7 +205,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    flex-direction: row;
     margin: 15px;
     padding: 25px;
     border-radius: 20px;
@@ -221,23 +222,25 @@
     border-radius: 20px 0 0 20px;
     padding: 5px;
     object-fit: cover;
-    height: 150px;
+    height: 190px;
     width: 100%;
   }
   
   .mostPopularMarseille .sectionArticle article {
     display: flex;
-    flex-direction: row;
   }
   
-  /*.sectionTitle {
+  .sectionTitle {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    margin: 0 15px;
+    align-items: baseline;
   }
 
-  .activities .sectionTitle {
+  .displayMore {
+    margin: 0 15px;
+  }
+
+  /*.activities .sectionTitle {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -255,9 +258,9 @@
   }
 
   i.fa-solid.fa-star {
-  color: #0065FC;
-  padding-bottom: 10px;
-}
+    color: #0065FC;
+    padding-bottom: 10px;
+  }
 
   span i.fa-solid.fa-star {
     color: lightgrey;
@@ -267,25 +270,17 @@
 .activitiesMarseille {
   display: flex;
   flex-wrap: wrap;
-}
-
-.activities {
-  display: flex;
-  margin: 0 auto;
+  margin: 15px;
   padding: 25px;
 }
 
-.activities .sectionArticle {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.activities, .activities .sectionArticle {
+  display: flex;
+}
 
   .activities .sectionAside {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
 .activities article, 
@@ -296,12 +291,19 @@
   filter: drop-shadow(0 1mm 1mm rgb(105, 105, 105));
 }
 
-.activities article img,
+.activities article img {
+  border-radius: 20px 20px 0 0;
+  padding: 5px;
+  object-fit: cover;
+  height: 450px;
+  width: 100%;
+}
+
 .activities aside img {
   border-radius: 20px 20px 0 0;
   padding: 5px;
   object-fit: cover;
-  height: 230px;
+  height: 200px;
   width: 100%;
 }
 
@@ -320,4 +322,62 @@ section.about {
   list-style: none;
   padding: 0;
 }
+
+@media screen and (min-width: 992px) and (orientation: portrait) { 
+  .housing {
+    display: initial;
+  }
+  .housingMarseille {
+    max-width: 100%;
+  }
+  .housingMarseille article img {
+    height: 210px;
+  }
+  .displayMore {
+    margin: 15px;
+  }
+  .popularHousingMarseille {
+    max-width: 100%;
+  }
+  .popularHousingMarseille .sectionArticle {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .mostPopularMarseille .sectionArticle article {
+    display: initial;
+  }
+  .popularHousingMarseille article img {
+    border-radius: 20px 20px 0 0;
+    
+  }
+ }
+
+ @media screen and (min-height: 992px) and (orientation: landscape) { 
+  .housing {
+    display: initial;
+  }
+  .housingMarseille {
+    max-width: 100%;
+  }
+  .housingMarseille article img {
+    height: 210px;
+  }
+  .displayMore {
+    margin: 15px;
+  }
+  .popularHousingMarseille {
+    max-width: 100%;
+  }
+  .popularHousingMarseille .sectionArticle {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .mostPopularMarseille .sectionArticle article {
+    display: initial;
+  }
+  .popularHousingMarseille article img {
+    border-radius: 20px 20px 0 0;
+    
+  }
+ }
 
