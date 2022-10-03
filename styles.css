@@ -202,6 +202,10 @@
     width: 100%;
   }
 
+  .housingMarseille article img:hover {
+    filter: brightness(0.9);
+  }
+
   .popularHousingMarseille {
     max-width: 27%;
     background-color: #f2F2F2;
@@ -320,7 +324,7 @@
 section.about {
   display: flex;
   flex-wrap: wrap;
-  padding: 25px;
+  padding: 55px;
   background-color: #f2f2f2;
   justify-content: space-around;
 }
@@ -379,6 +383,18 @@ section.about {
  }
 
  @media screen and (max-width: 768px) { 
+  .infoSite a img {
+    width: 100%;
+    height: 50px;
+  }
+
+  nav li.activeNav a::before, nav li.inactiveNav a::before {
+    top: 35px;
+    position: relative;  
+  }
+  nav ul {
+    padding: 0;
+  }
   h1 {
     font-size: 1.5em !important;
   }
