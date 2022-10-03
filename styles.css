@@ -83,19 +83,24 @@
   form.searchForm {
     margin: 15px;
     position: relative;
+    display: inline-flex;
   }
 
   i.fa-solid.fa-location-dot {
-    padding: 12px;
+    padding: 13px;
     background: #f2f2f2;
     border-radius: 10px 0 0 10px;
   }
 
-  input.outside {
+  button.outside {
+    display: none;
+  }
+
+  .inputContainer input {
     background: #0065F2;
     border-radius: 0 10px 10px 0;
     border: none;
-    padding: 10px;
+    padding: 13px;
     color: white;
   }
 
@@ -176,15 +181,13 @@
     border-radius: 20px;
   }
 
-  .housingMarseille .sectionArticle, 
-  .popularHousingMarseille .sectionArticle {
+  .housingMarseille .sectionArticle {
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: center;*/
   }
 
   .housingMarseille article {
-   /*max-width: 30%;*/
+    max-width: 30%;
     background-color: white;
     border-radius: 20px;
     margin: 10px;
@@ -195,7 +198,7 @@
     border-radius: 20px 20px 0 0;
     padding: 5px;
     object-fit: cover;
-    height: 164px;
+    height: 225px;
     width: 100%;
   }
 
@@ -222,8 +225,8 @@
     border-radius: 20px 0 0 20px;
     padding: 5px;
     object-fit: cover;
-    height: 190px;
-    width: 100%;
+    height: 200px;
+    width: 165px;
   }
   
   .mostPopularMarseille .sectionArticle article {
@@ -234,10 +237,12 @@
     display: flex;
     margin: 0 15px;
     align-items: baseline;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .displayMore {
-    margin: 0 15px;
+    margin: 15px;
   }
 
   /*.activities .sectionTitle {
@@ -262,6 +267,10 @@
     padding-bottom: 10px;
   }
 
+  .blackStar i.fa-solid.fa-star {
+    color: black;
+  }
+
   span i.fa-solid.fa-star {
     color: lightgrey;
     padding-bottom: 10px;
@@ -272,13 +281,14 @@
   flex-wrap: wrap;
   margin: 15px;
   padding: 25px;
+  justify-content: space-around;
 }
 
 .activities, .activities .sectionArticle {
   display: flex;
 }
 
-  .activities .sectionAside {
+.activities .sectionAside {
     display: flex;
     flex-direction: column;
   }
@@ -295,7 +305,7 @@
   border-radius: 20px 20px 0 0;
   padding: 5px;
   object-fit: cover;
-  height: 450px;
+  height: 550px;
   width: 100%;
 }
 
@@ -303,7 +313,7 @@
   border-radius: 20px 20px 0 0;
   padding: 5px;
   object-fit: cover;
-  height: 200px;
+  height: 245px;
   width: 100%;
 }
 
@@ -323,61 +333,112 @@ section.about {
   padding: 0;
 }
 
-@media screen and (min-width: 992px) and (orientation: portrait) { 
+@media screen and (max-width: 1360px) { 
   .housing {
-    display: initial;
+    flex-direction: column-reverse;
   }
-  .housingMarseille {
+  .popularHousingMarseille, .housingMarseille {
     max-width: 100%;
   }
+  .housingMarseille article {
+    max-width: 47%;
+  }
+  .sectionArticle {
+    display: flex;
+  } 
+  .popularHousingMarseille article{
+    max-width: 33%;
+  }
+}
+
+@media screen and (max-width: 992px) { 
   .housingMarseille article img {
     height: 210px;
   }
-  .displayMore {
-    margin: 15px;
-  }
-  .popularHousingMarseille {
-    max-width: 100%;
-  }
   .popularHousingMarseille .sectionArticle {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
   }
   .mostPopularMarseille .sectionArticle article {
-    display: initial;
+    max-width: 100%;
   }
-  .popularHousingMarseille article img {
-    border-radius: 20px 20px 0 0;
-    
+  .activities, .activities .sectionArticle {
+    flex-direction: column;
+  }
+  .activities .sectionAside {
+    flex-direction: row;
+  }
+  .activities article img {
+    height: 150px;
+    width: 100%;
+  }
+  .activities aside img {
+    height: 150px;
+    width: 100%;
   }
  }
 
- @media screen and (min-height: 992px) and (orientation: landscape) { 
-  .housing {
-    display: initial;
+ @media screen and (max-width: 768px) { 
+  h1 {
+    font-size: 1.5em !important;
+  }
+  button.outside {
+    display: block;
+    background: #0065F2;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    padding: 13px;
+    color: white;
+  }
+  .inputContainer input {
+    display: none;
+  }
+  .housingMarseille article {
+    max-width: 100%;
+  }
+  .activities, .activities .sectionArticle {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .infoSite {
+    flex-direction: column;
+  }
+  .filtersList {
+    display: block;
+  }
+  .filtersList ul {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .popularHousingMarseille {
+    margin: 0;
+    padding: 5px;
+    border-radius: 0;
+  }
+  .popularHousingMarseille article img {
+    height: 160px;
+    width: 160px;
+  }
+  .cardText {
+    padding: 0 15px;
   }
   .housingMarseille {
+    background-color: transparent;
+    padding: 0;
     max-width: 100%;
   }
   .housingMarseille article img {
-    height: 210px;
+    height: 160px;
   }
-  .displayMore {
-    margin: 15px;
+  .activitiesMarseille {
+    padding: 0;
   }
-  .popularHousingMarseille {
-    max-width: 100%;
+  .activities .sectionAside {
+    flex-direction: column;
   }
-  .popularHousingMarseille .sectionArticle {
-    display: flex;
-    flex-wrap: nowrap;
+  section.about {
+    flex-direction: column;
   }
-  .mostPopularMarseille .sectionArticle article {
-    display: initial;
-  }
-  .popularHousingMarseille article img {
-    border-radius: 20px 20px 0 0;
-    
-  }
- }
 
+ }

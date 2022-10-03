@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <meta name="author" content="Léonie Viau">
 <meta name="description" content="Developpement page de site Book. Projet deux Openclassrooms">
 <link rel="stylesheet" href="styles.css">
@@ -18,7 +18,7 @@
 <body>
     <header>
     <div class="infoSite">
-        <a href="#"><img src="images/logo/Booki.png" alt="logo booki pointant sur la page d'accueil booki">
+        <a href="#"><img src="images/logo/Booki@3x.png" alt="logo booki pointant sur la page d'accueil booki">
         </a>             
             <nav class="navbar" aria-label="Main Navigation">
                 <ul>
@@ -34,7 +34,11 @@
         <form class="searchForm">
         <i class="fa-solid fa-location-dot"></i>
         <input type="search" name="rechercher" placeholder="Marseille, France" class="inside">
-        <input type="submit" value="Rechercher" class="outside">
+        <div class="inputContainer">
+            <input type="submit" value="Rechercher" class="outside">
+            <button type="submit" value="Rechercher" class="outside">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
         </form>
     </header>
 
@@ -135,14 +139,14 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         </div>
-                </article>   
-            <p class="displayMore"><strong>Afficher plus</strong></p> 
+                </article>
             </div>
+            <p class="displayMore"><strong>Afficher plus</strong></p> 
         </div>
             <div class="popularHousingMarseille">  
             <div class="sectionTitle">
                 <h2>Les plus populaires</h2>
-                <span><i class="fa-solid fa-star"></i></span>
+                <span class="blackStar"><i class="fa-solid fa-star"></i></span>
             </div>   
             <aside class="mostPopularMarseille">
                 <div class="sectionArticle">
