@@ -22,7 +22,7 @@
   .infoSite {
     display: flex;
     justify-content: space-between;
-    margin: 15px;
+    margin: 0 50px;
     align-items: center;
   }
 
@@ -173,7 +173,7 @@
     max-width: 70%;
     background-color: #f2F2F2;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
     margin: 15px;
@@ -184,6 +184,7 @@
   .housingMarseille .sectionArticle {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .housingMarseille article {
@@ -210,7 +211,7 @@
     max-width: 27%;
     background-color: #f2F2F2;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin: 15px;
     padding: 25px;
@@ -337,12 +338,17 @@ section.about {
   padding: 0;
 }
 
+.aboutList ul li a {
+color: black;
+}
+
 @media screen and (max-width: 1360px) { 
   .housing {
     flex-direction: column-reverse;
   }
   .popularHousingMarseille, .housingMarseille {
     max-width: 100%;
+    justify-content: flex-start;
   }
   .housingMarseille article {
     max-width: 47%;
@@ -358,6 +364,9 @@ section.about {
 @media screen and (max-width: 992px) { 
   .housingMarseille article img {
     height: 210px;
+  }
+  .popularHousingMarseille article img {
+    width: 415px;
   }
   .popularHousingMarseille .sectionArticle {
     display: flex;
@@ -387,14 +396,17 @@ section.about {
     width: 100%;
     height: 50px;
   }
-
-  nav li.activeNav a::before, nav li.inactiveNav a::before {
-    top: 35px;
-    position: relative;  
-  }
   nav ul {
     padding: 0;
   }
+
+  .activeNav {
+      border-bottom: 3px solid #0065F2;
+  }
+  .inactiveNav {
+      border-bottom: 3px solid #F2F2F2;
+  }
+
   h1 {
     font-size: 1.5em !important;
   }
