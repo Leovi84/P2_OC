@@ -16,9 +16,7 @@
     text-decoration: none;
   }
 
-  h4 {   
-    font-weight: bolder;
-  }
+/* --------- HEADER --------*/
 
   .infoSite {
     display: flex;
@@ -88,7 +86,7 @@
   }
 
   i.fa-solid.fa-location-dot {
-    padding: 13px;
+    padding: 15px;
     background: #f2f2f2;
     border-radius: 10px 0 0 10px;
   }
@@ -109,6 +107,10 @@
     padding: 10px;
     font-weight: bolder;
   }
+
+/* --------- MAIN --------*/
+
+/* --------- SECTION FILTERS --------*/
 
   .filtersList {
     display: flex;
@@ -144,7 +146,9 @@
   .filtersList li a {
     color: black;
     font-weight: bold;
-  } 
+    display: flex;
+    align-items: center;
+}
 
   .filtersList li:hover, .filtersList li:visited {
     filter: grayscale(1);
@@ -161,6 +165,8 @@
   p.infos {
     margin: 15px;
   }
+
+/* --------- SECTION HOUSING --------*/
 
   .housing {
     display: flex;
@@ -250,7 +256,10 @@
   .cardText {
     padding: 0 15px;
   }
-
+  
+  h4 {   
+    font-weight: bolder;
+  }
   .cardText h4, .cardText p  {
     color: black;
     margin: auto;
@@ -270,6 +279,8 @@
     color: lightgrey;
     padding-bottom: 10px;
   }
+
+/* --------- SECTION ACTIVITIES MARSEILLE --------*/
 
 .activitiesMarseille {
   display: flex;
@@ -312,6 +323,8 @@
   width: 100%;
 }
 
+/* --------- FOOTER --------*/
+
 section.about {
   display: flex;
   flex-wrap: wrap;
@@ -332,6 +345,8 @@ section.about {
 color: black;
 }
 
+/* --------- RESPONSIVE TABLET --------*/
+
 @media screen and (max-width: 992px) { 
   .housing {
     flex-direction: column-reverse;
@@ -346,6 +361,9 @@ color: black;
   .sectionArticle {
     display: flex;
   } 
+  .asideActivities {
+    width: 50%;
+  }
   .housingMarseille article img {
     height: 210px;
   }
@@ -370,20 +388,33 @@ color: black;
   }
  }
 
+/* --------- SECTION MOBILE --------*/
+
  @media screen and (max-width: 768px) { 
   .infoSite a img {
     width: 100%;
     height: 50px;
   }
+  nav.navbar {
+    width: 100%;
+  }
   nav ul {
+    justify-content: space-around;
     padding: 0;
   }
-  .activeNav {
-      border-bottom: 3px solid #0065F2;
+  nav li {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0;;
   }
-  .inactiveNav {
-      border-bottom: 3px solid #F2F2F2;
+  nav li.activeNav  {
+    border-bottom: #0065F2 solid 3px;
   }
+  nav li.inactiveNav  {
+    border-bottom: #f2F2F2 solid 3px;
+  }
+
   h1 {
     font-size: 1.5em !important;
   }
@@ -401,12 +432,17 @@ color: black;
   .housingMarseille article {
     max-width: 100%;
   }
+  .asideActivities {
+    width: 95%;
+  }
   .activities, .activities .sectionArticle {
     display: flex;
     flex-wrap: wrap;
   }
   .infoSite {
     flex-direction: column;
+    margin: 0;
+
   }
   .filtersList {
     display: block;
